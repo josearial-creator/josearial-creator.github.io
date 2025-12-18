@@ -13,85 +13,78 @@
             background: #000 url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
-            padding: 20px;
+            padding: 10px;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
-            color: white;
         }
 
         .tarjeta {
             background: rgba(0, 0, 0, 0.85); 
             backdrop-filter: blur(10px);
-            padding: 30px;
+            padding: 25px;
             border-radius: 20px;
             border: 2px solid #00d4ff;
             box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
             text-align: center;
-            max-width: 500px;
             width: 100%;
+            max-width: 500px; /* Asegura espacio para los iconos */
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
+            color: white;
             text-transform: uppercase;
-            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
-            margin: 0 0 20px 0;
+            text-shadow: 0 0 10px #00d4ff;
+            margin-bottom: 20px;
         }
 
+        /* CUADRÍCULA CORREGIDA */
         .grid-accesos {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-            gap: 12px;
+            grid-template-columns: repeat(4, 1fr); /* 4 por fila en PC */
+            gap: 10px;
+        }
+
+        /* Ajuste para móviles: 3 columnas si la pantalla es pequeña */
+        @media (max-width: 400px) {
+            .grid-accesos {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
 
         .acceso {
             color: white;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 12px 5px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 15px 5px;
             border-radius: 12px;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 1px solid rgba(0, 212, 255, 0.3);
+            border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
-        .acceso i {
-            font-size: 22px;
-            margin-bottom: 6px;
-        }
-
-        .acceso span {
-            font-size: 9px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
+        .acceso i { font-size: 22px; margin-bottom: 6px; }
+        .acceso span { font-size: 9px; font-weight: bold; text-transform: uppercase; }
 
         .acceso:hover {
             background: #00d4ff;
             color: black;
-            box-shadow: 0 0 20px #00d4ff;
+            box-shadow: 0 0 15px #00d4ff;
             transform: translateY(-3px);
         }
 
-        /* VENTANA DEL CHATBOT IA */
+        /* CHATBOT */
         .chat-box {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            width: 280px;
-            background: #111;
-            border: 2px solid #00d4ff;
-            border-radius: 15px;
-            display: none;
-            flex-direction: column;
-            overflow: hidden;
-            z-index: 9999;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: fixed; bottom: 100px; right: 20px;
+            width: 260px; background: #111; border: 2px solid #00d4ff;
+            border-radius: 15px; display: none; flex-direction: column;
+            z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
 
-        .chat-header { background: #00d4ff; color: #000; padding: 12px; font-weight: bold; font-size: 14px
+        .chat-header { background: #00d4ff; color: #000; padding: 10px; font-weight: bold; font-size: 13px; }
+        .chat-body { padding: 15px; color: #fff; font-size: 12px; text-align: left; }
