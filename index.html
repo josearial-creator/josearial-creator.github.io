@@ -85,6 +85,32 @@
             font-size: 14px;
             text-shadow: 0 0 5px #00ff88;
         }
+        .btn-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: scale(1.1) rotate(10deg);
+    box-shadow: 0 0 40px rgba(37, 211, 102, 1);
+    background-color: #fff;
+    color: #25d366;
+}
     </style>
 </head>
 <body>
@@ -107,6 +133,9 @@
             <a href="https://web.whatsapp.com" target="_blank" class="acceso"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
             <a href="https://web.telegram.org" target="_blank" class="acceso"><i class="fa-brands fa-telegram"></i><span>Telegram</span></a>
         </div>
+        <a href="https://wa.me/34600000000?text=Hola%20Jose,%20vengo%20de%20tu%20web%20neón" class="btn-whatsapp" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
     </div>
 
 </body>
