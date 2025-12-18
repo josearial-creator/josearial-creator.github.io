@@ -11,10 +11,29 @@
 }
 
 h1 {
-    font-weight: 700; /* Hace que el título sea más grueso y potente */
-    letter-spacing: -1px; /* Junta un poquito las letras para un look más moderno */
+    h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #fff; /* Color de la letra blanco para que resalte */
+    text-align: center;
+    text-transform: uppercase; /* Pone todo en mayúsculas para más impacto */
+    
+    /* El truco del Neón: Varias capas de sombra con diferentes desenfoques */
+    text-shadow: 
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 20px #00d4ff, /* Color principal del neón */
+        0 0 40px #00d4ff,
+        0 0 80px #00d4ff;
+    
+    animation: parpadeo 2s infinite alternate; /* Opcional: añade un latido */
 }
 
+/* Este código hace que el neón "vibre" un poquito, como una luz real */
+@keyframes parpadeo {
+    from { opacity: 1; }
+    to { opacity: 0.8; }
+}
 p {
     font-weight: 300; /* Hace que el texto sea más fino y aireado */
 }
