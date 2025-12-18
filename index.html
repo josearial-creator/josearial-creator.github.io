@@ -2,8 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Panel Neón Total</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control - Jose</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
@@ -19,37 +21,93 @@
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
+            color: white;
         }
 
         .tarjeta {
-            background: rgba(0, 0, 0, 0.8); 
-            backdrop-filter: blur(12px);
+            background: rgba(0, 0, 0, 0.85); 
+            backdrop-filter: blur(10px);
             padding: 30px;
-            border-radius: 25px;
+            border-radius: 20px;
             border: 2px solid #00d4ff;
-            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
             text-align: center;
             max-width: 500px;
             width: 100%;
         }
 
         h1 {
-            font-weight: 700;
-            color: #fff;
+            font-size: 2rem;
             text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
 
-        /* Cuadrícula de Accesos Directos */
         .grid-accesos {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+            grid-template-columns: repeat(4, 1fr); /* 4 iconos por fila */
             gap: 15px;
             margin-top: 25px;
         }
 
         .acceso {
-            color: #fff;
+            color: white;
             text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 5px;
+            border-radius: 12px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .acceso i {
             font-size: 24px;
-            background: rgba
+            margin-bottom: 8px;
+        }
+
+        .acceso span {
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .acceso:hover {
+            background: #00d4ff;
+            color: black;
+            box-shadow: 0 0 20px #00d4ff;
+            transform: translateY(-5px);
+        }
+
+        #mensaje {
+            height: 20px;
+            margin: 10px 0;
+            font-size: 14px;
+            text-shadow: 0 0 5px #00ff88;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="tarjeta">
+        <h1>PANEL DE JOSE</h1>
+        <div id="mensaje">Sistema Online</div>
+
+        <div class="grid-accesos">
+            <a href="https://www.infojobs.net" target="_blank" class="acceso"><i class="fa-solid fa-briefcase"></i><span>Infojobs</span></a>
+            <a href="https://www.facebook.com" target="_blank" class="acceso"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
+            <a href="https://mail.google.com" target="_blank" class="acceso"><i class="fa-solid fa-envelope"></i><span>Gmail</span></a>
+            <a href="https://github.com" target="_blank" class="acceso"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+            <a href="https://www.linkedin.com" target="_blank" class="acceso"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
+            <a href="https://gemini.google.com" target="_blank" class="acceso"><i class="fa-solid fa-robot"></i><span>Gemini</span></a>
+            <a href="https://drive.google.com" target="_blank" class="acceso"><i class="fa-brands fa-google-drive"></i><span>Drive</span></a>
+            <a href="https://www.amazon.es" target="_blank" class="acceso"><i class="fa-brands fa-amazon"></i><span>Amazon</span></a>
+            <a href="https://calendar.google.com" target="_blank" class="acceso"><i class="fa-solid fa-calendar-days"></i><span>Calendar</span></a>
+            <a href="https://tasks.google.com" target="_blank" class="acceso"><i class="fa-solid fa-check-double"></i><span>Tasks</span></a>
+            <a href="https://web.whatsapp.com" target="_blank" class="acceso"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
+            <a href="https://web.telegram.org" target="_blank" class="acceso"><i class="fa-brands fa-telegram"></i><span>Telegram</span></a>
+        </div>
+    </div>
+
+</body>
+</html>
