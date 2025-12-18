@@ -3,88 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel de Control Total - Jose</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <title>Jose Panel</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         body {
-            background: #000 url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
-            background-size: cover;
-            margin: 0;
-            padding: 10px;
-            min-height: 100vh;
+            background: #000;
+            color: white;
+            font-family: sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            margin: 0;
         }
-
         .tarjeta {
-            background: rgba(0, 0, 0, 0.85); 
-            backdrop-filter: blur(10px);
-            padding: 25px;
-            border-radius: 20px;
             border: 2px solid #00d4ff;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+            padding: 20px;
             text-align: center;
-            width: 100%;
-            max-width: 500px; /* Asegura espacio para los iconos */
+            border-radius: 15px;
+            width: 90%;
+            max-width: 400px;
         }
-
-        h1 {
-            font-size: 1.6rem;
-            color: white;
-            text-transform: uppercase;
-            text-shadow: 0 0 10px #00d4ff;
-            margin-bottom: 20px;
-        }
-
-        /* CUADRÍCULA CORREGIDA */
-        .grid-accesos {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 por fila en PC */
+            grid-template-columns: repeat(3, 1fr);
             gap: 10px;
+            margin-top: 20px;
         }
-
-        /* Ajuste para móviles: 3 columnas si la pantalla es pequeña */
-        @media (max-width: 400px) {
-            .grid-accesos {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        .acceso {
-            color: white;
+        .icon {
+            background: #111;
+            padding: 15px;
+            border-radius: 10px;
+            color: #00d4ff;
             text-decoration: none;
-            background: rgba(255, 255, 255, 0.08);
-            padding: 15px 5px;
-            border-radius: 12px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid rgba(0, 212, 255, 0.2);
+            font-size: 20px;
+            border: 1px solid #333;
         }
-
-        .acceso i { font-size: 22px; margin-bottom: 6px; }
-        .acceso span { font-size: 9px; font-weight: bold; text-transform: uppercase; }
-
-        .acceso:hover {
-            background: #00d4ff;
-            color: black;
-            box-shadow: 0 0 15px #00d4ff;
-            transform: translateY(-3px);
-        }
-
-        /* CHATBOT */
-        .chat-box {
-            position: fixed; bottom: 100px; right: 20px;
-            width: 260px; background: #111; border: 2px solid #00d4ff;
-            border-radius: 15px; display: none; flex-direction: column;
-            z-index: 9999; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-        }
-
-        .chat-header { background: #00d4ff; color: #000; padding: 10px; font-weight: bold; font-size: 13px; }
-        .chat-body { padding: 15px; color: #fff; font-size: 12px; text-align: left; }
+    </style>
+</head>
+<body>
+    <div class="tarjeta">
+        <h1>PANEL JOSE</h1>
+        <div class="grid">
+            <a href="https://www.infojobs.net" class="icon"><i class="fa-solid fa-briefcase"></i></a>
+            <a href="https://www.facebook.com" class="icon"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://mail.google.com" class="icon"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://github.com" class="icon"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com" class="icon"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://gemini.google.com" class="icon"><i class="fa-solid fa-robot"></i></a>
+            <a href="https://drive.google.com" class="icon"><i class="fa-brands fa-google-drive"></i></a>
+            <a href="https://www.amazon.es" class="icon"><i class="fa-brands fa-amazon"></i></a>
+            <a href="https://calendar.google.com" class="icon"><i class="fa-solid fa-calendar-days"></i></a>
+            <a href="https://tasks.google.com" class="icon"><i class="fa-solid fa-check-double"></i></a>
+            <a href="https://web.whatsapp.com" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://web.telegram.org" class="icon"><i class="fa-brands fa-telegram"></i></a>
+        </div>
+    </div>
+</body>
+</html>
