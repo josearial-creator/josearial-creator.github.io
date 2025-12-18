@@ -3,57 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Mi Primera Web con Gemini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    
     <style>
-    body {
-    /* ... lo que ya tenías del fondo ... */
-    font-family: 'Poppins', sans-serif; /* Aquí es donde ocurre la magia */
-    color: #333; /* Un gris muy oscuro para que sea más elegante que el negro puro */
-}
+        body {
+            /* Imagen de fondo */
+            background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
 
-h1 {
-    h1 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    color: #fff; /* Color de la letra blanco para que resalte */
-    text-align: center;
-    text-transform: uppercase; /* Pone todo en mayúsculas para más impacto */
-    
-    /* El truco del Neón: Varias capas de sombra con diferentes desenfoques */
-    text-shadow: 
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #00d4ff, /* Color principal del neón */
-        0 0 40px #00d4ff,
-        0 0 80px #00d4ff;
-    
-    animation: parpadeo 2s infinite alternate; /* Opcional: añade un latido */
-}
+        .tarjeta {
+            background: rgba(255, 255, 255, 0.1); /* Fondo muy transparente */
+            backdrop-filter: blur(15px); /* Efecto cristal empañado */
+            padding: 40px;
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 450px;
+        }
 
-/* Este código hace que el neón "vibre" un poquito, como una luz real */
-@keyframes parpadeo {
-    from { opacity: 1; }
-    to { opacity: 0.8; }
-}
-p {
-    font-weight: 300; /* Hace que el texto sea más fino y aireado */
-}
+        h1 {
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            /* Efecto NEÓN corregido */
+            text-shadow: 
+                0 0 5px #fff,
+                0 0 10px #fff,
+                0 0 20px #00d4ff,
+                0 0 40px #00d4ff;
+            animation: parpadeo 2s infinite alternate;
+        }
+
+        @keyframes parpadeo {
+            from { opacity: 1; }
+            to { opacity: 0.7; }
+        }
+
+        p {
+            font-weight: 300;
+            color: #fff; /* Texto en blanco para que se vea sobre el fondo */
+        }
+
+        button {
+            background-color: #00d4ff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
+        }
     </style>
 </head>
 <body>
 
     <div class="tarjeta">
-        <h1>¡Hola, soy [Tu Nombre]!</h1>
+        <h1>¡Hola, soy Jose!</h1>
         <p>Esta es mi primera página web gestionada por mí mismo.</p>
         <p id="mensaje">Haz clic en el botón para ver qué pasa.</p>
         <button onclick="saludar()">¡Haz clic aquí!</button>
     </div>
 
     <script>
-        // Aquí va el JavaScript - La lógica
         function saludar() {
-            document.getElementById("mensaje").innerHTML = "¡Felicidades! Acabas de ejecutar tu primer script.";
-            document.getElementById("mensaje").style.color = "green";
-            document.getElementById("mensaje").style.fontWeight = "bold";
+            const mensaje = document.getElementById("mensaje");
+            mensaje.innerHTML = "¡Felicidades! Acabas de ejecutar tu primer script.";
+            mensaje.style.color = "#00ff88"; // Un verde neón para que combine
+            mensaje.style.fontWeight = "bold";
         }
     </script>
 
