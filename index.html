@@ -2,12 +2,12 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Primera Web con Gemini</title>
+    <title>Mi Web Neón Total</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
         body {
-            /* Imagen de fondo */
+            /* FONDO DE GALAXIA */
             background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
@@ -18,78 +18,29 @@
             justify-content: center;
             align-items: center;
             font-family: 'Poppins', sans-serif;
+            overflow: hidden;
         }
 
         .tarjeta {
-            background: rgba(255, 255, 255, 0.1); /* Fondo muy transparente */
-            backdrop-filter: blur(15px); /* Efecto cristal empañado */
+            background: rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(12px);
             padding: 40px;
             border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 2px solid #00d4ff; /* Borde de neón fino */
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5); /* Resplandor de la tarjeta */
             text-align: center;
-            max-width: 450px;
+            max-width: 400px;
         }
 
         h1 {
             font-weight: 700;
             color: #fff;
             text-transform: uppercase;
-            /* Efecto NEÓN corregido */
+            margin-bottom: 20px;
+            /* NEÓN POTENTE PARA EL TÍTULO */
             text-shadow: 
                 0 0 5px #fff,
-                0 0 10px #fff,
+                0 0 10px #00d4ff,
                 0 0 20px #00d4ff,
                 0 0 40px #00d4ff;
-            animation: parpadeo 2s infinite alternate;
-        }
-
-        @keyframes parpadeo {
-            from { opacity: 1; }
-            to { opacity: 0.7; }
-        }
-
-        p {
-            font-weight: 300;
-            color: #fff; /* Texto en blanco para que se vea sobre el fondo */
-        }
-
-        button {
-            background-color: #00d4ff;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-            transition: 0.3s;
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-        }
-
-        button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0, 212, 255, 0.8);
-        }
-    </style>
-</head>
-<body>
-
-    <div class="tarjeta">
-        <h1>¡Hola, soy Jose!</h1>
-        <p>Esta es mi primera página web gestionada por mí mismo.</p>
-        <p id="mensaje">Haz clic en el botón para ver qué pasa.</p>
-        <button onclick="saludar()">¡Haz clic aquí!</button>
-    </div>
-
-    <script>
-        function saludar() {
-            const mensaje = document.getElementById("mensaje");
-            mensaje.innerHTML = "¡Felicidades! Acabas de ejecutar tu primer script.";
-            mensaje.style.color = "#00ff88"; // Un verde neón para que combine
-            mensaje.style.fontWeight = "bold";
-        }
-    </script>
-
-</body>
-</html>
+            animation: parpadeo
