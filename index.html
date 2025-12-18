@@ -34,17 +34,28 @@
             text-align: center;
             max-width: 500px;
             width: 100%;
+            position: relative;
         }
 
         h1 {
             font-size: 2rem;
+            text-transform: uppercase;
             text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
             margin: 10px 0;
         }
 
+        #mensaje {
+            height: 25px;
+            margin: 10px 0;
+            font-size: 14px;
+            color: #00ff88;
+            text-shadow: 0 0 5px #00ff88;
+            font-weight: bold;
+        }
+
         .grid-accesos {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 iconos por fila */
+            grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             margin-top: 25px;
         }
@@ -54,89 +65,4 @@
             text-decoration: none;
             background: rgba(255, 255, 255, 0.1);
             padding: 15px 5px;
-            border-radius: 12px;
-            transition: 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid rgba(0, 212, 255, 0.3);
-        }
-
-        .acceso i {
-            font-size: 24px;
-            margin-bottom: 8px;
-        }
-
-        .acceso span {
-            font-size: 10px;
-            font-weight: bold;
-        }
-
-        .acceso:hover {
-            background: #00d4ff;
-            color: black;
-            box-shadow: 0 0 20px #00d4ff;
-            transform: translateY(-5px);
-        }
-
-        #mensaje {
-            height: 20px;
-            margin: 10px 0;
-            font-size: 14px;
-            text-shadow: 0 0 5px #00ff88;
-        }
-        .btn-whatsapp {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 35px;
-    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-.btn-whatsapp:hover {
-    transform: scale(1.1) rotate(10deg);
-    box-shadow: 0 0 40px rgba(37, 211, 102, 1);
-    background-color: #fff;
-    color: #25d366;
-}
-    </style>
-</head>
-<body>
-
-    <div class="tarjeta">
-        <h1>PANEL DE JOSE</h1>
-        <div id="mensaje">Sistema Online</div>
-
-        <div class="grid-accesos">
-            <a href="https://www.infojobs.net" target="_blank" class="acceso"><i class="fa-solid fa-briefcase"></i><span>Infojobs</span></a>
-            <a href="https://www.facebook.com" target="_blank" class="acceso"><i class="fa-brands fa-facebook"></i><span>Facebook</span></a>
-            <a href="https://mail.google.com" target="_blank" class="acceso"><i class="fa-solid fa-envelope"></i><span>Gmail</span></a>
-            <a href="https://github.com" target="_blank" class="acceso"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
-            <a href="https://www.linkedin.com" target="_blank" class="acceso"><i class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a>
-            <a href="https://gemini.google.com" target="_blank" class="acceso"><i class="fa-solid fa-robot"></i><span>Gemini</span></a>
-            <a href="https://drive.google.com" target="_blank" class="acceso"><i class="fa-brands fa-google-drive"></i><span>Drive</span></a>
-            <a href="https://www.amazon.es" target="_blank" class="acceso"><i class="fa-brands fa-amazon"></i><span>Amazon</span></a>
-            <a href="https://calendar.google.com" target="_blank" class="acceso"><i class="fa-solid fa-calendar-days"></i><span>Calendar</span></a>
-            <a href="https://tasks.google.com" target="_blank" class="acceso"><i class="fa-solid fa-check-double"></i><span>Tasks</span></a>
-            <a href="https://web.whatsapp.com" target="_blank" class="acceso"><i class="fa-brands fa-whatsapp"></i><span>WhatsApp</span></a>
-            <a href="https://web.telegram.org" target="_blank" class="acceso"><i class="fa-brands fa-telegram"></i><span>Telegram</span></a>
-        </div>
-        <a href="https://wa.me/34627310576?text=Hola%20Jose,%20vengo%20de%20tu%20web%20neón" class="btn-whatsapp" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i>
-</a>
-    </div>
-
-</body>
-</html>
+            border-radius
